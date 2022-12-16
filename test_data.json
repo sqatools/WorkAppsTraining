@@ -1,0 +1,35 @@
+{
+    "teacher": [
+        {
+          "mobile": 45678, "name": "tech1", "email": "tech1@gmail.com"
+        },
+        {
+          "name": "tech2", "email": "tech2@gmail.com", "mobile": 45665678},
+        {"name": "tech3", "email": "tech3@gmail.com", "mobile": 456756548},
+        {"name": "tech4", "email": "tech4@gmail.com", "mobile": 456565478}
+    ],
+    "student": [
+        {"name": "stud1", "email": "stud1@gmail.com", "mobile": 4567865999},
+        {"name": "stud1", "email": "stud1@gmail.com", "mobile": 88888888},
+        {"name": "stud2", "email": "stud2@gmail.com", "mobile": 45665678},
+        {"name": "stud3", "email": "stud3@gmail.com", "mobile": 456756548},
+        {"name": "stud4", "email": "stud4@gmail.com", "mobile": 123456789}
+    ],
+
+  "env" : {
+    "test" : {
+      "browser" : "chrome", "url": "https://test.google.co.in"
+    },
+    "beta": {
+      "browser" : "firefox", "url": "https://beta.google.co.in"
+    },
+
+    "prod":
+    {
+      "browser" : "edge", "url": "https://www.google.co.in"
+    }
+
+  }
+
+
+}

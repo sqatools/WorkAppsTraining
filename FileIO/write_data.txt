@@ -1,0 +1,2 @@
+This is new line to be added
+This is new line to be added with append mode

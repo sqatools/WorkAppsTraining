@@ -1,0 +1,35 @@
+Create a class structure of school
+
+-> School class  is a parent class which accepts two parameters
+    -> school name,
+    -> school address,
+    -> school fee
+    -> We have to create method for all the instance variable
+
+-> Student is child class which accept three parameters
+    -> student name
+    -> student standard
+    -> student roll no.
+    -> We have to create methods for all the instance variable
+
+
+################################################
+Design Class Structure for booking website
+and provide all variables in constant file
+
+-> There are four classes in the class design and each
+   accept different parameters.
+
+-> Flight Booking Class accept four parameters
+     -> source, destination, departure date, fare
+
+-> Hotel Booking Class accept four parameters
+    -> Place, hotel name, hotel fare, checkin date
+
+-> Car Booking Class accept parameter
+    -> destination, date, car fare.
+
+-> Train Booking Class accept parameter
+    -> source, destination, departure date, train fare
+
+

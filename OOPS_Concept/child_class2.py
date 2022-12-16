@@ -1,0 +1,22 @@
+from OOPS_Concept.parent_class import father
+
+class son2(father):
+    def __init__(self, sname, fname, fhouse, fcar, fbusiness, gname, gland):
+        super().__init__(fname, fhouse, fcar, fbusiness, gname, gland)
+        self.sname = sname
+
+    def show_son_name(self):
+        print("Son name :", self.sname)
+
+    def show_all_details_of_father(self):
+        self.show_father_name()
+        self.show_father_car()
+        self.show_father_house_details()
+        self.show_father_business()
+        name = self.show_grand_parent_name()
+        property = self.show_gparent_property()
+        print(name, property)
+
+if __name__ == '__main__':
+    obj = son2('Aditya', 'Mohan', '4BHk', 'BMW', 'Construction', 'Bhagirath', '200Acr')
+    obj.show_all_details_of_father()

@@ -1,0 +1,8 @@
+{
+  "browser" : "Chrome",
+  "url" : "https://www.google.co.in",
+  "timeout" : 15,
+  "username" : "adminuser",
+  "password"  : "P@ssw0rdpasword"
+
+}

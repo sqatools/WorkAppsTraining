@@ -1,0 +1,76 @@
+Selenium Locators
+
+ID : we can directly get the id from element from devTool
+NAME : we can directly get the id from element from devTool
+XPATH
+CSS_SELECTOR
+TAG NAME
+CLASS
+TEXT
+LINk
+PART_LINK
+
+
+#######################
+XPATH
+
+absolute xpath : /html/body/div[2]/div[4]/div/div/div[1]/div[1]/div/div/p
+relative xpath :
+Basic Xpath : //tagname[@attribute='value']
+             # //p[@class='sc-giYglK eCwiKJ fswWidgetPlaceholder']
+                # Facebook Login
+               //input[@name='email']
+               //input[@id='email']
+               //input[@placeholder='Email address or phone number']
+               //input[@aria-label='Email address or phone number']
+               //div/input[@aria-label='Email address or phone number']
+               //form//input[@name='email']
+
+# Text Method ():
+             //tagname[text()='test value'] #
+            (//p[text()='Enter city or airport'])[1]
+
+# contains method:  //tagname[contains(@attribute, 'partial value')]
+                    -> //input[contains(@placeholder, 'phone')]
+                    -> //a[contains(text(), 'Create New')]
+                    -> (//a[contains(text(), 'Create')])[1]
+
+
+
+
+# following  :  //tagname1[@att='attr_value']//following::tagname2[@attr2='attr_value']
+                 https://automationbysqatools.blogspot.com/2021/05/dummy-website.html
+                //input[@id='billing_name']//following::input[@id='street_address1']
+                //table[@id='cities']//following::tr/th[text()='Select Option']
+
+# parent       : //tagname1[@att='attr_value']//parent::tagname2[@attr2='attr_value']
+                 //td[text()='Hyderabad']//parent::tr
+                 //td[text()='6000']//parent::tr//input[@type='checkbox']
+
+# ancestor     : //tagname1[@att='attr_value']//ancestor::tagname2[@attr2='attr_value']
+                 //td[text()='6000']//ancestor::tr//input[@type='checkbox']
+                 //td[text()='6000']//ancestor::tr//input[@type='checkbox']//parent::td//parent::tr//following-sibling::tr
+
+# child :            //tagname1[@att='attr_value']//child::tagname2[@attr2='attr_value']
+                     //div[@align='left']//ul//child::li[1]
+
+# following-sibling : //tagname1[@att='attr_value']//following-sibling::tagname2[@attr2='attr_value']
+                      //input[@value='radio_678']//parent::li//following-sibling::li[2]
+
+goibibo go:
+//tagname1[@attr='value']//following-sibling::tagname2[@attr=value]
+
+
+//span[text()='From']//following-sibling::p[text()='Enter city or airport']
+//span[text()='To']//following-sibling::p[text()='Enter city or airport']
+
+#############  CSS_SELECTOR ##############
+
+1.  tagname[attribute='value']
+    input[id='billing_name']
+    input#billing_name
+CSS =      div[id='billing_details'] > input#billing_name
+           div#billing_details > input#billing_name
+           div#billing_details > input[id='billing_name']
+
+XPATH=    //div[@id='billing_details']/input[@id='billing_name']

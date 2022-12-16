@@ -1,0 +1,22 @@
+a2 – b2 = (a – b)(a + b)
+(a + b)2 = a2 + 2ab + b2
+a2 + b2 = (a + b)2 – 2ab
+(a – b)2 = a2 – 2ab + b2
+(a + b + c)2 = a2 + b2 + c2 + 2ab + 2bc + 2ca
+(a – b – c)2 = a2 + b2 + c2 – 2ab + 2bc – 2ca
+(a + b)3 = a3 + 3a2b + 3ab2 + b3 ; (a + b)3 = a3 + b3 + 3ab(a + b)
+(a – b)3 = a3 – 3a2b + 3ab2 – b3 = a3 – b3 – 3ab(a – b)
+a3 – b3 = (a – b)(a2 + ab + b2)
+a3 + b3 = (a + b)(a2 – ab + b2)
+(a + b)4 = a4 + 4a3b + 6a2b2 + 4ab3 + b4
+(a – b)4 = a4 – 4a3b + 6a2b2 – 4ab3 + b4
+a4 – b4 = (a – b)(a + b)(a2 + b2)
+a5 – b5 = (a – b)(a4 + a3b + a2b2 + ab3 + b4)
+
+Q. spherical shaped tank has a radius of 21 m. Find the capacity of it in liter to store water in it.
+
+R = 21
+x = 22/7 
+Formular = 4/3XR2
+
+
