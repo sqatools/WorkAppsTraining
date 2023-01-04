@@ -10,7 +10,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 from selenium.webdriver.edge.service import Service as edgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from SeleniumCode.test_data import *
+from GitCode.WorkAppsTraining.SeleniumCode.test_data import *
 import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -33,15 +33,39 @@ driver.maximize_window()
 wait = WebDriverWait(driver, 15, poll_frequency=2)
 alert = Alert(driver)
 
+"""
 driver.find_element(By.ID, 'btnShowMsg').click()
 time.sleep(2)
 print(alert.text)
 alert.accept()
-
+"""
 time.sleep(2)
 
-driver.find_element(By.ID, '')
+# Second pop alert
+"""
+driver.find_element(By.ID, 'button').click()
+time.sleep(2)
+print(alert.text)
+#alert.accept()
+alert.dismiss()
+time.sleep(2)
+get_msg = driver.find_element(By.ID, 'demo').text
+print(get_msg)
+assert get_msg == 'You pressed OK!'
+"""
 
+# Third alert provide input
+
+driver.find_element(By.ID, 'promptbtn').click()
+time.sleep(3)
+alert.send_keys("SQA Tools")
+alert.accept()
+
+get_msg = driver.find_element(By.ID, 'prompt').text
+print(get_msg)
+time.sleep(3)
+
+assert get_msg == 'Hello SQA Tools! How are you today?'
 driver.close()
 
 
