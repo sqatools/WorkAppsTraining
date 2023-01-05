@@ -1,0 +1,3 @@
+pytest -v .\PytestCode\test\test_smoke.py
+pytest -v -m "abc and smoke" .\PytestCode\test\
+pytest -vs -m "abc or smoke" .\PytestCode\test\
