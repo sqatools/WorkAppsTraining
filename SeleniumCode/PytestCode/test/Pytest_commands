@@ -1,3 +1,9 @@
 pytest -v .\PytestCode\test\test_smoke.py
 pytest -v -m "abc and smoke" .\PytestCode\test\
 pytest -vs -m "abc or smoke" .\PytestCode\test\
+
+# command to install htmlreport.
+pip install pytest-html
+
+# command to execute test cases with html report
+pytest -vs --html=report.html .\test\test_login_class.py
