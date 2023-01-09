@@ -1,4 +1,15 @@
 import pytest
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+import sys
+sys.path.append("E:\\Trainings\\PythonSeleniumWorkApp14Nov2022\\GitCode\\WorkAppsTraining\\SeleniumCode\\PytestCode")
+
+# E:\Trainings\PythonSeleniumWorkApp14Nov2022\GitCode\WorkAppsTraining\SeleniumCode\PytestCode
+from data.constants import *
+from util.selenium_base_class import SeleniumBaseClass
 
 @pytest.fixture(scope='function')
 def smoke_setup():
@@ -24,3 +35,15 @@ def notscop_setup():
     print("\b no scope setup done")
     yield
     print("\n no scope setup cleanup done")
+
+@pytest.fixture(scope='class')
+def get_driver(request):
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    #driver.get("https://")
+    request.cls.workapp = SeleniumBaseClass(driver)
+    yield
+    driver.close()
+
+@pytest.fixture(scope='class')
+def get_url(request):
+    request.cls.url = web_url
