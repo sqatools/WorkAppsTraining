@@ -10,6 +10,27 @@ sys.path.append("E:\\Trainings\\PythonSeleniumWorkApp14Nov2022\\GitCode\\WorkApp
 # E:\Trainings\PythonSeleniumWorkApp14Nov2022\GitCode\WorkAppsTraining\SeleniumCode\PytestCode
 from data.constants import *
 from util.selenium_base_class import SeleniumBaseClass
+import os
+import json
+
+@pytest.fixture(scope='session')
+def get_config():
+    file_path = os.path.join(os.getcwd(), 'configuration.json')
+    file = open(file_path)
+    config_data = json.load(file)
+    return config_data
+
+@pytest.fixture(scope="class")
+def initial_config(request, get_config):
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    driver.get(get_config['url'])
+    driver.maximize_window()
+    driver.implicitly_wait(10)
+    request.cls.driver = driver
+    yield
+    driver.close()
+
+
 
 @pytest.fixture(scope='function')
 def smoke_setup():

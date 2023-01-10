@@ -4,6 +4,19 @@ pip install pytest-html : command to install
 """
 import pytest
 env = 'PROD'
+import datetime
+import logging
+
+log_filename = "./logs/" + datetime.datetime.now().strftime("workapps-web-selenium-%Y-%m-%d-%H-%M-%S")
+logging.basicConfig(
+    filename=f"{log_filename}.log",
+    format="%(asctime)s [%(levelname)s] %(message)s (%(filename)s:%(lineno)s)",
+    level=logging.INFO
+)
+logger = logging.getLogger(__name__)
+
+
+
 
 @pytest.mark.usefixtures("notscop_setup")
 class TestLogin:
@@ -13,6 +26,7 @@ class TestLogin:
     #@pytest.mark.skip
     @pytest.mark.parametrize('a, b, c', ([20, 30, 50], [40, 50, 100], [60, 70, 130]))
     def test_login_fun1(self, a, b, c):
+        logger.info(f"a : {a}, b:{b}, c: {c}")
         assert a + b == c
 
     @pytest.mark.smoke

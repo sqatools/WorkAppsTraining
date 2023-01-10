@@ -7,8 +7,8 @@ class SeleniumBaseClass:
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 
-    def click_elemet(self, locator):
+    def click_element(self, locator):
         self.driver.find_element(*locator).click()
 
-    def send_keys(self, data, locator):
+    def send_data_field(self, data, locator):
         self.driver.find_element(*locator).send_keys(data)
